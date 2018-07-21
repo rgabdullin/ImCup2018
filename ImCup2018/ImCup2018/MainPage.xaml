@@ -3,12 +3,66 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ImCup2018"
              x:Class="ImCup2018.MainPage">
-
     <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Grid HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand"
+              Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2" BackgroundColor="LightBlue"
+                         Padding="10">
+                <Label x:Name="DebugLabel"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="FillAndExpand"
+                       FontSize="12"
+                       TextColor="Black">
+                </Label>
+            </StackLayout>
+            <Button Grid.Row="2" Grid.Column="0" x:Name="NewButton"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="Red"
+                    Text="New"
+                    TextColor="White"
+                    FontSize="36"
+                    Clicked="NewButton_Clicked">
+            </Button>
+            <Button Grid.Row="2" Grid.Column="1" x:Name="HistoryButton"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="Green"
+                    Text="History"
+                    TextColor="White"
+                    FontSize="36"
+                    Clicked="HistoryButton_Clicked">
+            </Button>
+            <Button Grid.Row="3" Grid.Column="0" x:Name="WinesButton"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="Blue"
+                    Text="Wines"
+                    TextColor="White"
+                    FontSize="36"
+                    Clicked="WinesButton_Clicked">
+            </Button>
+            <Button Grid.Row="3" Grid.Column="1" x:Name="AboutButton"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="Yellow"
+                    Text="About"
+                    TextColor="White"
+                    FontSize="36"
+                    Clicked="AboutButton_Clicked">
+            </Button>
+        </Grid>
     </StackLayout>
 
 </ContentPage>

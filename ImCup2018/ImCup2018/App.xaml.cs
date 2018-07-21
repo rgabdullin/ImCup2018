@@ -1,6 +1,7 @@
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Plugin.Media;
 
 [assembly: XamlCompilation (XamlCompilationOptions.Compile)]
 namespace ImCup2018
@@ -11,7 +12,7 @@ namespace ImCup2018
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+			MainPage = new NavigationPage(new MainPage());
 		}
 
 		protected override void OnStart ()

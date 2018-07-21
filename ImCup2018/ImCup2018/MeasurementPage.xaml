@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ImCup2018.MeasurementPage">
+    <ContentPage.Content>
+        <Grid Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ScrollView Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0">
+                <Label x:Name="CupInput" FontSize="Micro"></Label>
+            </ScrollView>
+            
+            <Image x:Name="CameraInput" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0" IsVisible="False"
+                   VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                    BackgroundColor="LightGray"></Image>
+            <Button x:Name="FromCupButton" Grid.Row="1" Grid.Column="0"
+                    BackgroundColor="Orange" TextColor="White"
+                    Text="Smart Cup" FontSize="24" Clicked="FromCupButton_Clicked"></Button>
+            <Button x:Name="FromCameraButton" Grid.Row="1" Grid.Column="1"
+                    BackgroundColor="Orange" TextColor="White"
+                    Text="Camera" FontSize="24" Clicked="FromCameraButton_Clicked"></Button>
+            <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" x:Name="ReadyButton" IsVisible="False" 
+                    BackgroundColor="Orange" TextColor="White" Text="OK" FontSize="24" Clicked="ReadyButton_Clicked"></Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
